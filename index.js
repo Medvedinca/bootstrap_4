@@ -1,7 +1,6 @@
 var express = require('express');
+const PORT = process.env.PORT || '8080';
 var app = express();
+app.set("port", PORT);
 var path = require('path');
 app.use(express.static(path.join(process.cwd(), 'src')));
-http.listen((process.env.PORT || 5000), function(){
-  console.log('listening on *:5000');
-});
